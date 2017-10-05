@@ -9,11 +9,13 @@
 #include <Headers/kern_api.hpp>
 #include <Headers/kern_util.hpp>
 
+#ifndef LILU_CUSTOM_IOKIT_INIT
+
 OSDefineMetaClassAndStructors(PRODUCT_NAME, IOService)
 
 bool PRODUCT_NAME::init(OSDictionary *dict) {
 	if (!IOService::init(dict)) {
-		SYSLOG("init @ failed to initalise the parent");
+		SYSLOG("init", "failed to initalise the parent");
 		return false;
 	}
 	
@@ -22,7 +24,7 @@ bool PRODUCT_NAME::init(OSDictionary *dict) {
 
 bool PRODUCT_NAME::start(IOService *provider) {
 	if (!IOService::start(provider)) {
-		SYSLOG("init @ failed to start the parent");
+		SYSLOG("init", "failed to start the parent");
 		return false;
 	}
 	
@@ -33,27 +35,31 @@ void PRODUCT_NAME::stop(IOService *provider) {
 	IOService::stop(provider);
 }
 
+#endif /* LILU_CUSTOM_IOKIT_INIT */
+
 bool ADDPR(debugEnabled) = false;
+
+#ifndef LILU_CUSTOM_KMOD_INIT
 
 EXPORT extern "C" kern_return_t ADDPR(kern_start)(kmod_info_t *, void *) {
 	kern_return_t ret = KERN_FAILURE;
 	LiluAPI::Error error = lilu.requestAccess();
 	
 	if (error == LiluAPI::Error::NoError) {
-		error = lilu.shouldLoad(ADDPR(config).product, ADDPR(config).version, ADDPR(config).disableArg, ADDPR(config).disableArgNum,
-								ADDPR(config).debugArg, ADDPR(config).debugArgNum, ADDPR(config).betaArg, ADDPR(config).betaArgNum,
-								ADDPR(config).minKernel, ADDPR(config).maxKernel, ADDPR(debugEnabled));
+		error = lilu.shouldLoad(ADDPR(config).product, ADDPR(config).version, ADDPR(config).runmode, ADDPR(config).disableArg, ADDPR(config).disableArgNum,
+								ADDPR(config).debugArg, ADDPR(config).debugArgNum, ADDPR(config).betaArg, ADDPR(config).betaArgNum, ADDPR(config).minKernel,
+								ADDPR(config).maxKernel, ADDPR(debugEnabled));
 		
 		if (error == LiluAPI::Error::NoError) {
 			ADDPR(config).pluginStart();
 			ret = KERN_SUCCESS;
 		} else {
-			SYSLOG("init @ parent said we should not continue %d", error);
+			SYSLOG("init", "parent said we should not continue %d", error);
 		}
 		
 		lilu.releaseAccess();
 	} else {
-		SYSLOG("init @ failed to call parent %d", error);
+		SYSLOG("init", "failed to call parent %d", error);
 	}
 	
 	return ret;
@@ -64,3 +70,4 @@ EXPORT extern "C" kern_return_t ADDPR(kern_stop)(kmod_info_t *, void *) {
 	return KERN_FAILURE;
 }
 
+#endif /* LILU_CUSTOM_KMOD_INIT */

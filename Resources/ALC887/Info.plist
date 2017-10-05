@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>multiple</string>
 	<key>CodecID</key>
-	<integer>2183</integer>
+	<integer>283904135</integer>
 	<key>CodecName</key>
 	<string>ALC887</string>
 	<key>Files</key>
@@ -14,119 +14,15 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Toleda ALC887</string>
-				<key>Id</key>
-				<integer>1</integer>
-				<key>Path</key>
-				<string>layout1.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Toleda ALC887</string>
-				<key>Id</key>
-				<integer>2</integer>
-				<key>Path</key>
-				<string>layout2.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Toleda ALC887</string>
-				<key>Id</key>
-				<integer>3</integer>
-				<key>Path</key>
-				<string>layout3.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Mirone 3 ports (Pink, Green, Blue)</string>
 				<key>Id</key>
 				<integer>5</integer>
 				<key>Path</key>
 				<string>layout5.xml.zlib</string>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Mirone 5/6 ports (Gray, Black, Orange, Pink, Green, Blue)</string>
-				<key>Id</key>
-				<integer>7</integer>
-				<key>Path</key>
-				<string>layout7.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC887VD</string>
-				<key>Id</key>
-				<integer>11</integer>
-				<key>Path</key>
-				<string>layout11.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC887VD</string>
-				<key>Id</key>
-				<integer>13</integer>
-				<key>Path</key>
-				<string>layout13.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC887VD</string>
-				<key>Id</key>
-				<integer>17</integer>
-				<key>Path</key>
-				<string>layout17.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC887VD</string>
-				<key>Id</key>
-				<integer>18</integer>
-				<key>Path</key>
-				<string>layout18.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Custom by klblk for GA-Q87TN</string>
-				<key>Id</key>
-				<integer>33</integer>
-				<key>Path</key>
-				<string>layout33.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Custom by Constanta</string>
-				<key>Id</key>
-				<integer>99</integer>
-				<key>Path</key>
-				<string>layout99.xml.zlib</string>
-			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
-			<dict>
-				<key>Comment</key>
-				<string>Toleda</string>
-				<key>Id</key>
-				<integer>1</integer>
-				<key>Path</key>
-				<string>PlatformsT.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Toleda</string>
-				<key>Id</key>
-				<integer>2</integer>
-				<key>Path</key>
-				<string>PlatformsT.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Toleda</string>
-				<key>Id</key>
-				<integer>3</integer>
-				<key>Path</key>
-				<string>PlatformsT.xml.zlib</string>
-			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Mirone resources</string>
@@ -134,62 +30,6 @@
 				<integer>5</integer>
 				<key>Path</key>
 				<string>PlatformsM.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Mirone resources</string>
-				<key>Id</key>
-				<integer>7</integer>
-				<key>Path</key>
-				<string>PlatformsM.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC887VD</string>
-				<key>Id</key>
-				<integer>11</integer>
-				<key>Path</key>
-				<string>PlatformsID.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC887VD</string>
-				<key>Id</key>
-				<integer>13</integer>
-				<key>Path</key>
-				<string>PlatformsID.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC887VD</string>
-				<key>Id</key>
-				<integer>17</integer>
-				<key>Path</key>
-				<string>PlatformsID.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC887VD</string>
-				<key>Id</key>
-				<integer>18</integer>
-				<key>Path</key>
-				<string>PlatformsID.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Custom by klblk for GA-Q87TN</string>
-				<key>Id</key>
-				<integer>33</integer>
-				<key>Path</key>
-				<string>Platforms33.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Custom by Constanta</string>
-				<key>Id</key>
-				<integer>99</integer>
-				<key>Path</key>
-				<string>Platforms99.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -249,7 +89,7 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>gxnUEQ==</data>
+			<data>hBnUEQ==</data>
 			<key>MinKernel</key>
 			<integer>13</integer>
 			<key>Name</key>
